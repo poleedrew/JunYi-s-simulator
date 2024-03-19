@@ -1,0 +1,18 @@
+[
+    {
+        "sheet_status": "PM",
+        "selected_eqp_id": "CKODF200",
+        "model_abbr": "PM",
+        "booking": "PM",
+        "start_time": "2022-11-02 09:50:00",
+        "finish_time": "2022-11-02 18:00:00"
+    },
+    {
+        "sheet_status": "TEST",
+        "selected_eqp_id": "CKODF300",
+        "model_abbr": "TEST",
+        "booking": "TEST",
+        "start_time": "2022-11-03 07:00:00",
+        "finish_time": "2022-11-03 08:00:00"
+    }
+]

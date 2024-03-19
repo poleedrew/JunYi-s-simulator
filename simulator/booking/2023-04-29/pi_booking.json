@@ -1,0 +1,119 @@
+[
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKPIC100",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-04-29 11:43:37",
+        "finish_time": "2023-04-29 13:09:09",
+        "duration": 5121.0
+    },
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKPIC200",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-04-29 00:05:04",
+        "finish_time": "2023-04-29 00:59:59",
+        "duration": 3283.0
+    },
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKPIC300",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-04-29 03:04:26",
+        "finish_time": "2023-04-29 04:59:05",
+        "duration": 6866.0
+    },
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKPIC300",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-04-29 11:03:47",
+        "finish_time": "2023-04-29 12:47:42",
+        "duration": 6228.0
+    },
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKPIC300",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-04-29 13:42:27",
+        "finish_time": "2023-04-29 15:36:16",
+        "duration": 6818.0
+    },
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKPIC400",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-04-29 01:05:59",
+        "finish_time": "2023-04-29 02:09:45",
+        "duration": 3819.0
+    },
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKPIC400",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-04-29 03:13:44",
+        "finish_time": "2023-04-29 03:34:01",
+        "duration": 1209.0
+    },
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKPIC400",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-04-29 16:43:06",
+        "finish_time": "2023-04-29 18:06:05",
+        "duration": 4962.0
+    },
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKPIC400",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-04-29 22:26:25",
+        "finish_time": "2023-04-30 00:07:23",
+        "duration": 6051.0
+    },
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKPIC500",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-04-29 01:00:19",
+        "finish_time": "2023-04-29 01:47:09",
+        "duration": 2798.0
+    },
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKPIC500",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-04-29 02:12:28",
+        "finish_time": "2023-04-29 03:08:35",
+        "duration": 3359.0
+    },
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKPIC500",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-04-29 04:01:47",
+        "finish_time": "2023-04-29 04:31:22",
+        "duration": 1769.0
+    },
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKPIC500",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-04-29 06:14:59",
+        "finish_time": "2023-04-29 07:33:37",
+        "duration": 4501.0
+    }
+]

@@ -1,0 +1,11 @@
+[
+    {
+        "sheet_status": "TEST",
+        "selected_eqp_id": "CKODF400",
+        "booking": "TEST",
+        "model_abbr": "TEST",
+        "start_time": "2023-04-27 14:47:49",
+        "finish_time": "2023-04-28 16:40:46",
+        "duration": 60131.0
+    }
+]

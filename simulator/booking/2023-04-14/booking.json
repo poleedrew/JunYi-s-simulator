@@ -1,0 +1,20 @@
+[
+    {
+        "sheet_status": "TEST",
+        "selected_eqp_id": "CKODF300",
+        "booking": "TEST",
+        "model_abbr": "TEST",
+        "start_time": "2023-04-14 01:35:14",
+        "finish_time": "2023-04-14 17:35:44",
+        "duration": 21285.0
+    },
+    {
+        "sheet_status": "DMQC",
+        "selected_eqp_id": "CKODF300",
+        "booking": "DMQC",
+        "model_abbr": "DMQC",
+        "start_time": "2023-04-14 17:35:44",
+        "finish_time": "2023-04-14 21:26:35",
+        "duration": 13843.0
+    }
+]

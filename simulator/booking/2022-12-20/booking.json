@@ -1,0 +1,26 @@
+[
+    {
+        "sheet_status": "DOWN",
+        "selected_eqp_id": "CKODF300",
+        "model_abbr": "DOWN",
+        "booking": "DOWN",
+        "start_time": "2022-12-21 04:30:00",
+        "finish_time": "2022-12-21 04:40:00"
+    },
+    {
+        "sheet_status": "DOWN",
+        "selected_eqp_id": "CKODF400",
+        "model_abbr": "DOWN",
+        "booking": "DOWN",
+        "start_time": "2022-12-20 21:50:00",
+        "finish_time": "2022-12-20 22:00:00"
+    },
+    {
+        "sheet_status": "DOWN",
+        "selected_eqp_id": "CKODF400",
+        "model_abbr": "DOWN",
+        "booking": "DOWN",
+        "start_time": "2022-12-20 22:05:00",
+        "finish_time": "2022-12-20 22:10:00"
+    }
+]

@@ -1,0 +1,31 @@
+eqp_id_list: 
+  - CKODF100
+  - CKODF200
+  - CKODF300
+  - CKODF400
+  - CKODF500
+system_time:
+  # start: 2022/05/26 08:32
+  start: "2022-07-13 08:05:56"
+  # start: "2022-07-14 08:05:56"
+  # start: "2022-07-16 08:05:57"
+  # start: "2022-07-17 08:05:57"
+  # start: "2022-07-18 08:05:58"
+  # start: "2022-07-19 08:05:58"
+  # start: "2022-07-20 08:05:58"
+
+add_setup_time: True
+# add_setup_time: False
+
+stochastic: False
+
+available_abbr_cat:
+  - TFT
+  # - CF
+available_sheet_status:
+  - RUN
+  - WAIT
+  - HOLD
+sheet_grouping:
+  cassette_size: 100
+  time_interval: 3600

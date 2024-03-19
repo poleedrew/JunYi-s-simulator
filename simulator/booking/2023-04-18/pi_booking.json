@@ -1,0 +1,20 @@
+[
+    {
+        "sheet_status": "TEST",
+        "selected_eqp_id": "CKPIC200",
+        "booking": "TEST",
+        "model_abbr": "TEST",
+        "start_time": "2023-04-18 09:09:32",
+        "finish_time": "2023-04-19 14:25:20",
+        "duration": 80427.0
+    },
+    {
+        "sheet_status": "TEST",
+        "selected_eqp_id": "CKPIC400",
+        "booking": "TEST",
+        "model_abbr": "TEST",
+        "start_time": "2023-04-18 08:17:49",
+        "finish_time": "2023-04-19 14:25:59",
+        "duration": 83530.0
+    }
+]

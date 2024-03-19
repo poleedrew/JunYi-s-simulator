@@ -1,0 +1,42 @@
+[
+    {
+        "sheet_status": "TEST",
+        "selected_eqp_id": "CKODF100",
+        "model_abbr": "TEST",
+        "booking": "TEST",
+        "start_time": "2022-12-06 08:00:00",
+        "finish_time": "2022-12-07 08:00:00"
+    },
+    {
+        "sheet_status": "DOWN",
+        "selected_eqp_id": "CKODF300",
+        "model_abbr": "DOWN",
+        "booking": "DOWN",
+        "start_time": "2022-12-06 12:10:00",
+        "finish_time": "2022-12-06 12:15:00"
+    },
+    {
+        "sheet_status": "DOWN",
+        "selected_eqp_id": "CKODF400",
+        "model_abbr": "DOWN",
+        "booking": "DOWN",
+        "start_time": "2022-12-06 13:30:00",
+        "finish_time": "2022-12-06 13:35:00"
+    },
+    {
+        "sheet_status": "DOWN",
+        "selected_eqp_id": "CKODF400",
+        "model_abbr": "DOWN",
+        "booking": "DOWN",
+        "start_time": "2022-12-06 18:20:00",
+        "finish_time": "2022-12-06 18:25:00"
+    },
+    {
+        "sheet_status": "DOWN",
+        "selected_eqp_id": "CKODF400",
+        "model_abbr": "DOWN",
+        "booking": "DOWN",
+        "start_time": "2022-12-07 06:10:00",
+        "finish_time": "2022-12-07 06:20:00"
+    }
+]

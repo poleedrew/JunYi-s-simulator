@@ -1,0 +1,38 @@
+[
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKODF100",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-05-01 00:11:43",
+        "finish_time": "2023-05-01 00:19:36",
+        "duration": 464.0
+    },
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKODF200",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-05-01 05:13:49",
+        "finish_time": "2023-05-01 06:07:02",
+        "duration": 3184.0
+    },
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKODF500",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-05-01 01:00:14",
+        "finish_time": "2023-05-01 02:01:33",
+        "duration": 3667.0
+    },
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKODF500",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-05-01 04:31:28",
+        "finish_time": "2023-05-01 05:00:45",
+        "duration": 1745.0
+    }
+]

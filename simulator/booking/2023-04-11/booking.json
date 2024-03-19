@@ -1,0 +1,29 @@
+[
+    {
+        "sheet_status": "TEST",
+        "selected_eqp_id": "CKODF100",
+        "booking": "TEST",
+        "model_abbr": "TEST",
+        "start_time": "2023-04-11 08:52:29",
+        "finish_time": "2023-04-12 01:46:59",
+        "duration": 60855.0
+    },
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKODF500",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-04-11 03:10:30",
+        "finish_time": "2023-04-11 06:40:22",
+        "duration": 12581.0
+    },
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKODF500",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-04-11 13:35:16",
+        "finish_time": "2023-04-11 16:57:04",
+        "duration": 12085.0
+    }
+]

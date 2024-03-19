@@ -1,0 +1,10 @@
+[
+    {
+        "sheet_status": "TEST",
+        "selected_eqp_id": "CKODF400",
+        "model_abbr": "TEST",
+        "booking": "TEST",
+        "start_time": "2022-08-02 10:10:00",
+        "finish_time": "2022-08-03 06:30:00"
+    }
+]

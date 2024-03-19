@@ -1,0 +1,20 @@
+[
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKODF400",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-04-05 22:00:12",
+        "finish_time": "2023-04-06 01:00:22",
+        "duration": 10804.0
+    },
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKODF500",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-04-05 02:46:12",
+        "finish_time": "2023-04-05 06:25:10",
+        "duration": 13132.0
+    }
+]

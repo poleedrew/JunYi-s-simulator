@@ -1,0 +1,18 @@
+[
+    {
+        "sheet_status": "TEST",
+        "selected_eqp_id": "CKODF500",
+        "model_abbr": "TEST",
+        "booking": "TEST",
+        "start_time": "2023-03-09 08:00:00",
+        "finish_time": "2023-03-09 15:15:00"
+    },
+    {
+        "sheet_status": "TEST",
+        "selected_eqp_id": "CKODF500",
+        "model_abbr": "TEST",
+        "booking": "TEST",
+        "start_time": "2023-03-09 15:20:00",
+        "finish_time": "2023-03-10 08:00:00"
+    }
+]

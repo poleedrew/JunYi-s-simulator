@@ -1,0 +1,26 @@
+[
+    {
+        "sheet_status": "TEST",
+        "selected_eqp_id": "CKODF200",
+        "model_abbr": "TEST",
+        "booking": "TEST",
+        "start_time": "2022-09-18 08:00:00",
+        "finish_time": "2022-09-19 08:00:00"
+    },
+    {
+        "sheet_status": "TEST",
+        "selected_eqp_id": "CKODF300",
+        "model_abbr": "TEST",
+        "booking": "TEST",
+        "start_time": "2022-09-18 22:00:00",
+        "finish_time": "2022-09-19 05:00:00"
+    },
+    {
+        "sheet_status": "TEST",
+        "selected_eqp_id": "CKODF400",
+        "model_abbr": "TEST",
+        "booking": "TEST",
+        "start_time": "2022-09-18 08:00:00",
+        "finish_time": "2022-09-19 08:00:00"
+    }
+]

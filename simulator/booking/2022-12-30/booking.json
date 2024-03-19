@@ -1,0 +1,18 @@
+[
+    {
+        "sheet_status": "DOWN",
+        "selected_eqp_id": "CKODF300",
+        "model_abbr": "DOWN",
+        "booking": "DOWN",
+        "start_time": "2022-12-30 18:10:00",
+        "finish_time": "2022-12-30 18:20:00"
+    },
+    {
+        "sheet_status": "DOWN",
+        "selected_eqp_id": "CKODF400",
+        "model_abbr": "DOWN",
+        "booking": "DOWN",
+        "start_time": "2022-12-30 10:10:00",
+        "finish_time": "2022-12-30 10:20:00"
+    }
+]

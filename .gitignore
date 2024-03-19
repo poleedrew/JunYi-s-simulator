@@ -1,0 +1,268 @@
+*.csv
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+*.zip
+*.pyc
+*.html
+*.txt
+*.pkl
+*.png
+events.*
+
+
+simulator/wip_data
+simulator/wip_data_n+1_new
+simulator/wip_data_n+3_new
+simulator/wip_data_n+1_subroutine
+simulator/wip_data_n+2_subroutine
+simulator/wip_data_n+3_subroutine
+# simulator/dummy_data
+# simulator/plan
+simulator/tact_time
+simulator/tmp
+simulator/debug
+simulator/log
+simulator/weight
+simulator/result
+# Baseline_Rollout
+simulator/agent/Baseline_Rollout/log
+simulator/agent/Baseline_Rollout/result
+simulator/agent/Baseline_Rollout/weight
+simulator/agent/Baseline_Rollout/timeline
+simulator/agent/Baseline_Rollout/args
+
+# Alpha_zero
+simulator/agent/AlphaZero/log
+simulator/agent/AlphaZero/result
+simulator/agent/AlphaZero/weight
+simulator/agent/AlphaZero/timeline
+
+# End2end
+simulator/agent/End2end/log
+simulator/agent/End2end/result
+simulator/agent/End2end/weight
+simulator/agent/End2end/timeline
+
+# DQN
+simulator/agent/DQN/weight/
+simulator/agent/DQN/log/
+simulator/agent/DQN/timeline/
+simulator/agent/DQN/result/
+simulator/agent/DQN/args
+
+simulator/agent/DQN/future_log_setup/
+simulator/agent/DQN/future_result_setup/
+simulator/agent/DQN/future_weight_setup/
+simulator/agent/DQN/future_timeline/
+
+simulator/agent/DQN/thesis_result/
+simulator/agent/DQN/thesis_weight/
+
+simulator/agent/DQN/weight_setup/
+simulator/agent/DQN/log_setup/
+simulator/agent/DQN/result_setup/
+# DQN_Lite
+simulator/agent/DQN_Lite/weight/
+simulator/agent/DQN_Lite/log/
+simulator/agent/DQN_Lite/result/
+simulator/agent/DQN_Lite/timeline/
+
+# DQN_PBT
+simulator/agent/DQN_PBT/hyperparameter/
+simulator/agent/DQN_PBT/result/
+simulator/agent/DQN_PBT/timeline/
+simulator/agent/DQN_PBT/weight/
+
+# Rule
+simulator/agent/Rule/result/
+simulator/agent/Rule/timeline/
+simulator/agent/Rule/result_future/
+simulator/agent/Rule/result_debug/
+simulator/agent/Rule/result_dps_debug/
+
+# Soft DQN
+simulator/agent/SoftDQN/log/
+simulator/agent/SoftDQN/result/
+simulator/agent/SoftDQN/weight/
+simulator/agent/SoftDQN/timeline/
+
+# OR-Tools
+simulator/OR-Tools/presence
+simulator/OR-Tools/rank/
+simulator/OR-Tools/result/
+simulator/OR-Tools/result_debug/
+simulator/OR-Tools/result_mtz_cp/
+simulator/OR-Tools/result_mtz_milp/
+simulator/OR-Tools/timeline/
+simulator/OR-Tools/timeline_debug/
+simulator/OR-Tools/timeline_mtz_cp/
+simulator/OR-Tools/timeline_mtz_milp/
+simulator/OR-Tools/auo_booking_with_run.py
+simulator/OR-Tools/auo_booking.py
+simulator/OR-Tools/auo_fjsp3.py
+simulator/OR-Tools/auo_multi_obj.py
+simulator/OR-Tools/auo_setup_2.py
+simulator/OR-Tools/auo_setup.py
+simulator/OR-Tools/jsp_without_noop.py
+simulator/OR-Tools/post_process.py
+simulator/OR-Tools/toy_example.py
+simulator/OR-Tools/vrp_1.py
+simulator/OR-Tools/result_setup_time
+simulator/OR-Tools/dps_result
+
+# KPI
+simulator/kpi_single.py
+
+# Environment
+simulator/env/reg_model/
+
+# unused files
+simulator/time_distr.py
+
+########
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
+# .python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# poetry
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+#poetry.lock
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# PyCharm
+#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+#  and can be added to the global gitignore or merged into this file.  For a more nuclear
+#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
+#.idea/

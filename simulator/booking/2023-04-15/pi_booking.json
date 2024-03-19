@@ -1,0 +1,29 @@
+[
+    {
+        "sheet_status": "DMQC",
+        "selected_eqp_id": "CKPIC300",
+        "booking": "DMQC",
+        "model_abbr": "DMQC",
+        "start_time": "2023-04-15 13:44:24",
+        "finish_time": "2023-04-15 17:59:52",
+        "duration": 15303.0
+    },
+    {
+        "sheet_status": "TEST",
+        "selected_eqp_id": "CKPIC500",
+        "booking": "TEST",
+        "model_abbr": "TEST",
+        "start_time": "2023-04-15 02:02:20",
+        "finish_time": "2023-04-15 10:29:33",
+        "duration": 19660.0
+    },
+    {
+        "sheet_status": "TEST",
+        "selected_eqp_id": "CKPIC500",
+        "booking": "TEST",
+        "model_abbr": "TEST",
+        "start_time": "2023-04-15 10:44:02",
+        "finish_time": "2023-04-17 10:22:59",
+        "duration": 74757.0
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKPIC200",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-04-17 15:12:50",
+        "finish_time": "2023-04-17 19:16:53",
+        "duration": 14635.0
+    },
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKPIC300",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-04-17 18:05:11",
+        "finish_time": "2023-04-18 01:18:19",
+        "duration": 25978.0
+    },
+    {
+        "sheet_status": "DMQC",
+        "selected_eqp_id": "CKPIC500",
+        "booking": "DMQC",
+        "model_abbr": "DMQC",
+        "start_time": "2023-04-17 10:22:59",
+        "finish_time": "2023-04-17 14:23:42",
+        "duration": 14417.0
+    },
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKPIC500",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-04-17 14:23:42",
+        "finish_time": "2023-04-17 20:53:38",
+        "duration": 23388.0
+    }
+]

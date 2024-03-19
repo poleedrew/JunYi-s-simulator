@@ -1,0 +1,20 @@
+[
+    {
+        "sheet_status": "SHOT",
+        "selected_eqp_id": "CKODF200",
+        "booking": "SHOT",
+        "model_abbr": "SHOT",
+        "start_time": "2023-04-30 22:20:18",
+        "finish_time": "2023-05-01 02:47:40",
+        "duration": 16032.0
+    },
+    {
+        "sheet_status": "DMQC",
+        "selected_eqp_id": "CKODF500",
+        "booking": "DMQC",
+        "model_abbr": "DMQC",
+        "start_time": "2023-04-30 17:10:12",
+        "finish_time": "2023-04-30 21:28:13",
+        "duration": 15456.0
+    }
+]

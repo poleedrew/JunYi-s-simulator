@@ -1,0 +1,42 @@
+[
+    {
+        "sheet_status": "PM",
+        "selected_eqp_id": "CKODF100",
+        "model_abbr": "PM",
+        "booking": "PM",
+        "start_time": "2023-03-21 08:00:00",
+        "finish_time": "2023-03-21 20:45:00"
+    },
+    {
+        "sheet_status": "PM",
+        "selected_eqp_id": "CKODF200",
+        "model_abbr": "PM",
+        "booking": "PM",
+        "start_time": "2023-03-21 08:00:00",
+        "finish_time": "2023-03-21 21:45:00"
+    },
+    {
+        "sheet_status": "PM",
+        "selected_eqp_id": "CKODF300",
+        "model_abbr": "PM",
+        "booking": "PM",
+        "start_time": "2023-03-21 08:00:00",
+        "finish_time": "2023-03-21 22:00:00"
+    },
+    {
+        "sheet_status": "PM",
+        "selected_eqp_id": "CKODF400",
+        "model_abbr": "PM",
+        "booking": "PM",
+        "start_time": "2023-03-21 08:00:00",
+        "finish_time": "2023-03-21 18:00:00"
+    },
+    {
+        "sheet_status": "PM",
+        "selected_eqp_id": "CKODF500",
+        "model_abbr": "PM",
+        "booking": "PM",
+        "start_time": "2023-03-21 08:00:00",
+        "finish_time": "2023-03-22 08:00:00"
+    }
+]
