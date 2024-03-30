@@ -12,114 +12,114 @@
 events.*
 
 
-simulator/wip_data
-simulator/wip_data_n+1_new
-simulator/wip_data_n+3_new
-simulator/wip_data_n+1_subroutine
-simulator/wip_data_n+2_subroutine
-simulator/wip_data_n+3_subroutine
-# simulator/dummy_data
-# simulator/plan
-simulator/tact_time
-simulator/tmp
-simulator/debug
-simulator/log
-simulator/weight
-simulator/result
+wip_data
+wip_data_n+1_new
+wip_data_n+3_new
+wip_data_n+1_subroutine
+wip_data_n+2_subroutine
+wip_data_n+3_subroutine
+# dummy_data
+# plan
+tact_time
+tmp
+debug
+log
+weight
+result
 # Baseline_Rollout
-simulator/agent/Baseline_Rollout/log
-simulator/agent/Baseline_Rollout/result
-simulator/agent/Baseline_Rollout/weight
-simulator/agent/Baseline_Rollout/timeline
-simulator/agent/Baseline_Rollout/args
+agent/Baseline_Rollout/log
+agent/Baseline_Rollout/result
+agent/Baseline_Rollout/weight
+agent/Baseline_Rollout/timeline
+agent/Baseline_Rollout/args
 
 # Alpha_zero
-simulator/agent/AlphaZero/log
-simulator/agent/AlphaZero/result
-simulator/agent/AlphaZero/weight
-simulator/agent/AlphaZero/timeline
+agent/AlphaZero/log
+agent/AlphaZero/result
+agent/AlphaZero/weight
+agent/AlphaZero/timeline
 
 # End2end
-simulator/agent/End2end/log
-simulator/agent/End2end/result
-simulator/agent/End2end/weight
-simulator/agent/End2end/timeline
+agent/End2end/log
+agent/End2end/result
+agent/End2end/weight
+agent/End2end/timeline
 
 # DQN
-simulator/agent/DQN/weight/
-simulator/agent/DQN/log/
-simulator/agent/DQN/timeline/
-simulator/agent/DQN/result/
-simulator/agent/DQN/args
+agent/DQN/weight/
+agent/DQN/log/
+agent/DQN/timeline/
+agent/DQN/result/
+agent/DQN/args
 
-simulator/agent/DQN/future_log_setup/
-simulator/agent/DQN/future_result_setup/
-simulator/agent/DQN/future_weight_setup/
-simulator/agent/DQN/future_timeline/
+agent/DQN/future_log_setup/
+agent/DQN/future_result_setup/
+agent/DQN/future_weight_setup/
+agent/DQN/future_timeline/
 
-simulator/agent/DQN/thesis_result/
-simulator/agent/DQN/thesis_weight/
+agent/DQN/thesis_result/
+agent/DQN/thesis_weight/
 
-simulator/agent/DQN/weight_setup/
-simulator/agent/DQN/log_setup/
-simulator/agent/DQN/result_setup/
+agent/DQN/weight_setup/
+agent/DQN/log_setup/
+agent/DQN/result_setup/
 # DQN_Lite
-simulator/agent/DQN_Lite/weight/
-simulator/agent/DQN_Lite/log/
-simulator/agent/DQN_Lite/result/
-simulator/agent/DQN_Lite/timeline/
+agent/DQN_Lite/weight/
+agent/DQN_Lite/log/
+agent/DQN_Lite/result/
+agent/DQN_Lite/timeline/
 
 # DQN_PBT
-simulator/agent/DQN_PBT/hyperparameter/
-simulator/agent/DQN_PBT/result/
-simulator/agent/DQN_PBT/timeline/
-simulator/agent/DQN_PBT/weight/
+agent/DQN_PBT/hyperparameter/
+agent/DQN_PBT/result/
+agent/DQN_PBT/timeline/
+agent/DQN_PBT/weight/
 
 # Rule
-simulator/agent/Rule/result/
-simulator/agent/Rule/timeline/
-simulator/agent/Rule/result_future/
-simulator/agent/Rule/result_debug/
-simulator/agent/Rule/result_dps_debug/
+agent/Rule/result/
+agent/Rule/timeline/
+agent/Rule/result_future/
+agent/Rule/result_debug/
+agent/Rule/result_dps_debug/
 
 # Soft DQN
-simulator/agent/SoftDQN/log/
-simulator/agent/SoftDQN/result/
-simulator/agent/SoftDQN/weight/
-simulator/agent/SoftDQN/timeline/
+agent/SoftDQN/log/
+agent/SoftDQN/result/
+agent/SoftDQN/weight/
+agent/SoftDQN/timeline/
 
 # OR-Tools
-simulator/OR-Tools/presence
-simulator/OR-Tools/rank/
-simulator/OR-Tools/result/
-simulator/OR-Tools/result_debug/
-simulator/OR-Tools/result_mtz_cp/
-simulator/OR-Tools/result_mtz_milp/
-simulator/OR-Tools/timeline/
-simulator/OR-Tools/timeline_debug/
-simulator/OR-Tools/timeline_mtz_cp/
-simulator/OR-Tools/timeline_mtz_milp/
-simulator/OR-Tools/auo_booking_with_run.py
-simulator/OR-Tools/auo_booking.py
-simulator/OR-Tools/auo_fjsp3.py
-simulator/OR-Tools/auo_multi_obj.py
-simulator/OR-Tools/auo_setup_2.py
-simulator/OR-Tools/auo_setup.py
-simulator/OR-Tools/jsp_without_noop.py
-simulator/OR-Tools/post_process.py
-simulator/OR-Tools/toy_example.py
-simulator/OR-Tools/vrp_1.py
-simulator/OR-Tools/result_setup_time
-simulator/OR-Tools/dps_result
+OR-Tools/presence
+OR-Tools/rank/
+OR-Tools/result/
+OR-Tools/result_debug/
+OR-Tools/result_mtz_cp/
+OR-Tools/result_mtz_milp/
+OR-Tools/timeline/
+OR-Tools/timeline_debug/
+OR-Tools/timeline_mtz_cp/
+OR-Tools/timeline_mtz_milp/
+OR-Tools/auo_booking_with_run.py
+OR-Tools/auo_booking.py
+OR-Tools/auo_fjsp3.py
+OR-Tools/auo_multi_obj.py
+OR-Tools/auo_setup_2.py
+OR-Tools/auo_setup.py
+OR-Tools/jsp_without_noop.py
+OR-Tools/post_process.py
+OR-Tools/toy_example.py
+OR-Tools/vrp_1.py
+OR-Tools/result_setup_time
+OR-Tools/dps_result
 
 # KPI
-simulator/kpi_single.py
+kpi_single.py
 
 # Environment
-simulator/env/reg_model/
+env/reg_model/
 
 # unused files
-simulator/time_distr.py
+time_distr.py
 
 ########
 

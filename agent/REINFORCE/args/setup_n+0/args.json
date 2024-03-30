@@ -1,0 +1,22 @@
+{
+    "device": "cuda:0",
+    "exp_name": "setup_n+0",
+    "config_path": "env/config.yml",
+    "gap_path": "../AUO_data/plan/auo_data",
+    "job_dir": "../AUO_data/wip_data",
+    "booking_dir": "../AUO_data/booking",
+    "train_dates": "train_dates/train.json",
+    "eval_dates": "train_dates/3_all.json",
+    "round": 100000000,
+    "lr": 0.0001,
+    "step_size": 100,
+    "entropy_coef": 0.005,
+    "policy_num_layers": 3,
+    "hidden_dim": 128,
+    "GNN_num_layers": 2,
+    "w0": 0.0,
+    "w1": 0.0,
+    "w2": 1.0,
+    "w3": 0.0,
+    "total_days": 1
+}
