@@ -32,6 +32,8 @@ def train(train_task, round, episode):
         run_wip_path = os.path.join(args.job_dir, train_date, 'odf_run_wip.json')
     )
     simulator.load_gap(gap_path=os.path.join(args.gap_path, train_date, 'gap.json'))
+    simulator.load_plan(aout_path=os.path.join(plan_dir, "actual_output.json"), 
+                        eout_path=os.path.join(plan_dir, train_date, "expected_output.json"))
  
     avai_jobs = simulator.get_avai_jobs()
     MTT_reward = heuristic_makespan(copy.deepcopy(simulator), copy.deepcopy(avai_jobs), 'MTT')
@@ -132,11 +134,11 @@ if __name__ == "__main__":
     optimizer = optim.Adam(policy.parameters(), lr=args.lr, betas=(0.9, 0.999))
     scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=args.step_size, gamma=0.99)
     
-    ## load model
-    # model = torch.load("./weight/n_dps/round_1")
-    # policy.load_state_dict(model["policy_net"])
-    # optimizer.load_state_dict(model["optimizer"])
-    # scheduler.load_state_dict(model["scheduler"])
+    # load model
+    model = torch.load("agent/REINFORCE/weight/setup&dps_n+1/round_70")
+    policy.load_state_dict(model["policy_net"])
+    optimizer.load_state_dict(model["optimizer"])
+    scheduler.load_state_dict(model["scheduler"])
 
     writer = SummaryWriter("agent/REINFORCE/log/"+exp_name+"/")
     if not os.path.exists("agent/REINFORCE/log/" + exp_name):
@@ -145,7 +147,7 @@ if __name__ == "__main__":
     with open(args.train_dates, 'r') as file:
         train_tasks = json.load(file)
     
-    for round in range(1, args.round + 1):
+    for round in range(args.round + 1):
         improve_list = []
         return_list = []
         loss_list = []

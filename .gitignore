@@ -25,6 +25,8 @@ tmp
 debug
 log
 weight
+weight_0426
+args
 result
 # Baseline_Rollout
 agent/Baseline_Rollout/log

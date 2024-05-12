@@ -8,6 +8,7 @@ from agent.REINFORCE.model.REINFORCE import REINFORCE
 from agent.REINFORCE.heuristic import *
 from kpi import KPI
 from dateutil.parser import parse
+from collections import defaultdict
 
 seed = 1002
 torch.manual_seed(seed)
@@ -26,8 +27,8 @@ def eval_heuristic(eval_task):
         wait_wip_path = os.path.join(args.job_dir, eval_date, 'odf_wait_wip.json'),
         run_wip_path = os.path.join(args.job_dir, eval_date, 'odf_run_wip.json')
     )
-    # simulator.load_plan(aout_path=os.path.join(plan_dir, "actual_output.json"),
-    #                     eout_path=os.path.join(plan_dir, eval_date, "expected_output.json"))
+    simulator.load_plan(aout_path=os.path.join(plan_dir, "actual_output.json"),
+                        eout_path=os.path.join(plan_dir, eval_date, "expected_output.json"))
 
     simulator.load_gap(gap_path=os.path.join(plan_dir, eval_date, 'gap.json'))
     total_reward = 0
@@ -55,9 +56,8 @@ def eval_policy(eval_task):
         wait_wip_path = os.path.join(args.job_dir, eval_date, 'odf_wait_wip.json'),
         run_wip_path = os.path.join(args.job_dir, eval_date, 'odf_run_wip.json')
     )
-    # simulator.load_plan(aout_path=os.path.join(plan_dir, "actual_output.json"),
-    #                     eout_path=os.path.join(plan_dir, eval_date, "expected_output.json"))
-
+    simulator.load_plan(aout_path=os.path.join(plan_dir, "actual_output.json"),
+                        eout_path=os.path.join(plan_dir, eval_date, "expected_output.json"))
     simulator.load_gap(gap_path=os.path.join(args.gap_path, eval_date, 'gap.json'))
     
     avai_jobs = simulator.get_avai_jobs()
@@ -65,7 +65,6 @@ def eval_policy(eval_task):
     while True:
         data = simulator.get_graph_data()
         action, _, _ = policy(avai_jobs, data, step, simulator.instance, False)
-        # action, _, _ = policy(avai_jobs, data, step, simulator.instance, False)
         avai_jobs, _, done = simulator.step(action['job_id'], action['m_id']) 
         step += 1
         if done:
@@ -75,9 +74,9 @@ def eval_policy(eval_task):
             total_min_tact_time_sheet_count = simulator.instance.total_min_tact_time_sheet_count
             total_setup_time = simulator.instance.total_setup_time
             simulator.find_idle()
-            if not os.path.exists("agent/REINFORCE/result/" + exp_name):
-                os.makedirs("agent/REINFORCE/result/" + exp_name)
-            result_path = os.path.join("agent/REINFORCE/result/" + exp_name + "/", eval_task['name'] +'.json')
+            if not os.path.exists("agent/REINFORCE/result/" + weight_dir):
+                os.makedirs("agent/REINFORCE/result/" + weight_dir)
+            result_path = os.path.join("agent/REINFORCE/result/" + weight_dir + "/", eval_task['name'] +'.json')
             simulator.write_result(result_path)
             win, auo_dps, dps_0 = is_win(result_path, eval_date)
             if win:
@@ -147,23 +146,42 @@ if __name__ == "__main__":
     #     eval_tasks = json.load(file)
     #     for eval_task in eval_tasks:
     #         eval_heuristic(eval_task)
-
-    exp_name = args.exp_name
-    weight_dir = exp_name
+    weight_dir = args.exp_name
+    exp_name = weight_dir.split('/')[-2]
+    history_args_dir = os.path.join("agent/REINFORCE/args", exp_name, 'args.json')
+    with open(history_args_dir, 'r') as fp:
+        history_args = json.load(fp)
+    args.w0, args.w1, args.w2, args.w3 = history_args["w0"], history_args["w1"], history_args["w2"], history_args["w3"]
+    args.job_dir = history_args["job_dir"]
     print(args)
-    print(weight_dir)
     policy = REINFORCE(args).to(args.device)
     policy.load_state_dict(torch.load(weight_dir)["policy_net"])
-    win_days = 0
-    lose_dates = []
-    total_over_qtime_sheet, total_min_tact_time_sheet, total_setup_time_hour = 0, 0, 0
-    AUO_dps_avg, RL_dps_avg_0, RL_dps_avg_1 = 0, 0, 0
-    with open(args.eval_dates, 'r') as file:
-        eval_tasks = json.load(file)
-        for eval_task in eval_tasks:
-            eval_policy(eval_task)
-    print("win_days total_over_qtime total_min_tact_time_sheet total_setup_time_hour")
-    print(win_days, total_over_qtime_sheet, total_min_tact_time_sheet, total_setup_time_hour)
-    print("AUO_average_dps End-to-end_average_dps_0 End-to-end_average_dps_1")
-    print(AUO_dps_avg/len(eval_tasks), RL_dps_avg_0/len(eval_tasks), RL_dps_avg_1/len(eval_tasks))
-    print(lose_dates)
+    test_times = 10
+    average_data = defaultdict(float)
+    for i in range(test_times):
+        print(f'test_{i}:')
+        win_days = 0
+        lose_dates = []
+        total_over_qtime_sheet, total_min_tact_time_sheet, total_setup_time_hour = 0, 0, 0
+        AUO_dps_avg, RL_dps_avg_0, RL_dps_avg_1 = 0, 0, 0
+        with open(args.eval_dates, 'r') as file:
+            eval_tasks = json.load(file)
+            for eval_task in eval_tasks:
+                eval_policy(eval_task)
+        print("win_days total_over_qtime total_min_tact_time_sheet total_setup_time_hour")
+        print(win_days, total_over_qtime_sheet, total_min_tact_time_sheet, total_setup_time_hour)
+        print("AUO_average_dps End-to-end_average_dps_0 End-to-end_average_dps_1")
+        print(AUO_dps_avg/len(eval_tasks), RL_dps_avg_0/len(eval_tasks), RL_dps_avg_1/len(eval_tasks))
+        print(lose_dates)
+        average_data["win_days"] += win_days / test_times
+        average_data["total_over_qtime"] += total_over_qtime_sheet / test_times
+        average_data["total_min_tact_time_sheet"] += total_min_tact_time_sheet / test_times
+        average_data["total_setup_time_hour"] += total_setup_time_hour / test_times
+        average_data["End-to-end_average_dps_0"] += RL_dps_avg_0/len(eval_tasks) / test_times
+        average_data["End-to-end_average_dps_1"] += RL_dps_avg_1/len(eval_tasks) / test_times
+        print()
+    for v in list(average_data.keys()):
+        print(v, end=' ')
+    print()
+    for v in list(average_data.values()):
+        print(v, end=' ')

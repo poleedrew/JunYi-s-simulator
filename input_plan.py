@@ -119,7 +119,7 @@ if __name__ == "__main__":
     with open("train_dates/all.json") as file:
         tasks = json.load(file)
     
-    data_root_dir = "../../AUO_data"
+    data_root_dir = "../AUO_data"
     for item in tasks:
         start, task_name = item['start'], item['name']
         input_target_path = os.path.join(data_root_dir, task_name, "11_INPUT_TARGET.csv")

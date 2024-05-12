@@ -64,7 +64,7 @@ if __name__ == '__main__':
         tasks = json.load(file)
 
     data_root_dir = "../AUO_data"
-    future_day_num = 3
+    future_day_num = 1
     wip_data_dir = os.path.join(data_root_dir,  "wip_data")
     if future_day_num != 0:
         wip_data_dir =  os.path.join(data_root_dir,  f"wip_data_n+{future_day_num}_subroutine")

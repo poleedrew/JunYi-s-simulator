@@ -7,6 +7,7 @@ from itertools import accumulate
 from agent.REINFORCE.model.gnn import GNN
 from datetime import timedelta
 from collections import defaultdict
+import numpy as np
 torch.set_printoptions(precision=4)
 
 class REINFORCE(nn.Module):
@@ -102,6 +103,9 @@ class REINFORCE(nn.Module):
             else:
                 # print(f"R:{R}, baseline: {baseline}")
                 advantage = (R - baseline) / baseline
+            # sign = torch.sign(R-baseline) 
+            # advantage = sign * abs(advantage)
+            advantage = R - baseline # no normalized method
             # print(f"advantage: {advantage}")
             # print(f"log_prob: {log_prob.item()}, advantage: {advantage.item()}, entropy_coef: {self.args.entropy_coef}, entropy {entropy.item()}")
             loss.append(-log_prob * advantage - self.args.entropy_coef * entropy)

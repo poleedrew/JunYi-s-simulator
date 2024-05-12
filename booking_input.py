@@ -4,7 +4,7 @@ from collections import defaultdict
 if __name__ == '__main__':
     dates = {}
     booking_threshold = 90
-    with open('./booking_csv/trans(202304).csv', 'r', newline='') as csvfile:
+    with open('../AUO_data/booking_csv/trans(202304).csv', 'r', newline='') as csvfile:
         rows = csv.reader(csvfile)
         
         bookings = defaultdict(list)

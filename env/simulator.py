@@ -30,6 +30,9 @@ class AUO_Simulator(gym.Env):
 
     def load_booking(self, path):
         self.instance.load_booking(path)
+        
+    def load_plan(self, aout_path, eout_path):
+        self.instance.load_plan(aout_path, eout_path)
 
     def load_gap(self, gap_path):
         self.instance.load_gap(gap_path)

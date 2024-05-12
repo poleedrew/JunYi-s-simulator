@@ -15,7 +15,7 @@ def get_args():
     parser.add_argument('--train_dates', type=str, default="train_dates/train.json")
     parser.add_argument('--eval_dates', type=str, default="train_dates/3_all.json")
     # args for RL
-    parser.add_argument('--round', type=int, default=100000000)
+    parser.add_argument('--round', type=int, default=250)
     parser.add_argument('--lr', type=float, default=1e-4)
     parser.add_argument('--step_size', type=float, default=100)
     parser.add_argument('--entropy_coef', type=float, default=5e-3)
@@ -31,6 +31,16 @@ def get_args():
     parser.add_argument('--w2', default=0.0, type=float)    # setup_time
     parser.add_argument('--w3', default=0.0, type=float)    # dps
     
+    
+    parser.add_argument('--c1', default=0.5, type=float)
+    parser.add_argument('--c2', default=0.1, type=float)
+    parser.add_argument('--c3', default=0.5, type=float)
+    parser.add_argument('--c4', default=0.1, type=float)
+    parser.add_argument('--c5', default=0.5, type=float)
+    parser.add_argument('--k',  default=5, type=int)
+    parser.add_argument('--m',  default=4, type=int)
+    parser.add_argument('--e1', default=0.5, type=float)  # exponential preproduction
+    parser.add_argument('--e2', default=1, type=float)    # exponential tardiness  
     # compare dps setting
     parser.add_argument('--total_days', default=1, type=int)  # future_day_num
     args = parser.parse_args()

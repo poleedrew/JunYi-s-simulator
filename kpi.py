@@ -20,6 +20,8 @@ class KPI:
         self.rule_count = defaultdict(int) # rule use count
         
         self.date_actual_output = 0 # the date actual output
+        # print(result_path)
+       
         with open(result_path, 'r') as f:
             self.result = json.load(f)
     def is_booking(self, wip_info):
@@ -227,6 +229,20 @@ class KPI:
                     wip_info['finish_time'], '%Y-%m-%d %H:%M:%S')
                 dmqc_time += (finish_time_dt - start_time_dt)
         return dmqc_time
+    
+    def get_one_day_dmqc_time(self, date):
+        dmqc_time = timedelta(seconds=0)
+        settle_time_dt = parse(date) + timedelta(days=1, hours=7, minutes=30) + timedelta(hours=6)
+        print(settle_time_dt)
+        for wip_info in self.result:
+            start_time_dt = datetime.strptime(wip_info['start_time'], '%Y-%m-%d %H:%M:%S')
+            finish_time_dt = datetime.strptime(wip_info['finish_time'], '%Y-%m-%d %H:%M:%S')
+            if settle_time_dt < start_time_dt:
+                continue
+            if self.is_booking(wip_info) and wip_info['booking'] == 'DMQC':
+                print(start_time_dt, finish_time_dt)             
+                dmqc_time += (finish_time_dt - start_time_dt)
+        return dmqc_time
 
     def availability(self):
         run = self.get_total_run_time()
@@ -298,56 +314,57 @@ if __name__ == '__main__':
     ]
     # with open("eval_dates/12.json", 'r') as file:
     #     tasks = json.load(file)
-    result_dir = "agent/Baseline_Rollout/result/eval"
-    # result_dir = "agent/Rule/result"
+    # result_dir = "agent/Baseline_Rollout/result/eval"
+    result_dir = "agent/REINFORCE/result/my_dps_reward/round_249"
 
-    plan_dir = "plan/auo_data"
+    plan_dir = "../AUO_data/plan/auo_data"
     for item in tasks:
         start, task_name = item['start'], item['name']
-        result_name_dir = os.path.join(result_dir, task_name)
+        result_name_dir = os.path.join(result_dir, task_name + '.json')
         plan_name_dir = plan_dir
         date = task_name
-        for i, fn in enumerate(sorted(os.listdir(result_name_dir))):
-            result_file_name = os.path.join(result_name_dir, fn)
-            kpi_calc = KPI(result_file_name)
-            kpi_calc.load_plan(plan_name_dir, date)
-            settle_time_dt = parse(task_name) + timedelta(days=1, hours=7, minutes=30) + timedelta(hours=6)
-            
-            kpi_calc.add_completion(settle_time_dt)
-            kpi_calc.calculate_actual_dps_rate()
-           
-            # 產能面 KPI
-            availability = kpi_calc.availability()
-            utilization = kpi_calc.utilization()
-            speedup = kpi_calc.speedup()
-            
-            # 需求面 KPI
-            gap_product = kpi_calc.gap_product
-            
-            # 品質面(Qtime) KPI
-            over_qtime_sheet_count = kpi_calc.over_qtime_sheet_count()
-            min_tact_time_sheet_count = kpi_calc.min_tact_time_sheet_count()
-            wip_count = 0
-            sheet_count = 0
-            for wip_info in kpi_calc.result:
-                if "order" in wip_info.keys():
-                    wip_count += 1
-                    sheet_count += wip_info['size']
-            kpi_calc.calculate_model_abbr_num()
-            kpi_calc.get_rule_count()
-            if "iter03400" in result_file_name:
-                print(
-                    f"{result_file_name:70}\t"
-                    f"({kpi_calc.total_history_num[0]}+{kpi_calc.date_actual_output})/{kpi_calc.total_expected_num[0]}={kpi_calc.total_actual_dps_rate:.3}\t"
-                    f"({kpi_calc.total_history_num[0]}+{kpi_calc.total_contribute_num[0]})/{kpi_calc.total_expected_num[0]}={kpi_calc.dps_0:.3}"
-                    # f"({kpi_calc.total_history_num[1]}+{kpi_calc.total_contribute_num[1]})/{kpi_calc.total_expected_num[1]}={kpi_calc.dps_1:.3}"
-                    # f"({kpi_calc.total_history_num[2]}+{kpi_calc.total_contribute_num[2]})/{kpi_calc.total_expected_num[2]}={kpi_calc.dps_2:.3}"
-                    # f"{round(availability, DECIMAL):10}\t"
-                    # f"{round(utilization, DECIMAL):10}\t"
-                    # f"{round(speedup, DECIMAL):10}\t"
-                    # f"{round(availability * utilization * speedup, DECIMAL)}\t"
-                    # f"{sum(kpi_calc.model_abbr.values())}\n"
-                    # f"{kpi_calc.model_abbr}\n"
-                    # f"{sum(kpi_calc.rule_count.values())}\n"
-                    # f"{kpi_calc.rule_count}\n"
-                )
+        # for i, fn in enumerate(sorted(os.listdir(result_name_dir))):
+        result_file_name = os.path.join(result_name_dir)
+        kpi_calc = KPI(result_file_name)
+        kpi_calc.load_plan(plan_name_dir, date)
+        settle_time_dt = parse(task_name) + timedelta(days=1, hours=7, minutes=30) + timedelta(hours=6)
+        
+        kpi_calc.add_completion(settle_time_dt)
+        kpi_calc.calculate_actual_dps_rate()
+        
+        # 產能面 KPI
+        availability = kpi_calc.availability()
+        utilization = kpi_calc.utilization()
+        speedup = kpi_calc.speedup()
+        
+        # 需求面 KPI
+        gap_product = kpi_calc.gap_product
+        
+        # 品質面(Qtime) KPI
+        over_qtime_sheet_count = kpi_calc.over_qtime_sheet_count()
+        min_tact_time_sheet_count = kpi_calc.min_tact_time_sheet_count()
+        total_setup_time = kpi_calc.get_one_day_dmqc_time(date).total_seconds() / 3600
+        wip_count = 0
+        sheet_count = 0
+        for wip_info in kpi_calc.result:
+            if "order" in wip_info.keys():
+                wip_count += 1
+                sheet_count += wip_info['size']
+        kpi_calc.calculate_model_abbr_num()
+        # kpi_calc.get_rule_count()
+        print(
+            f"{result_file_name:70}\t"
+            f"{total_setup_time}\t"
+            f"({kpi_calc.total_history_num[0]}+{kpi_calc.date_actual_output})/{kpi_calc.total_expected_num[0]}={kpi_calc.total_actual_dps_rate:.3}\t"
+            f"({kpi_calc.total_history_num[0]}+{kpi_calc.total_contribute_num[0]})/{kpi_calc.total_expected_num[0]}={kpi_calc.dps_0:.3}"
+            # f"({kpi_calc.total_history_num[1]}+{kpi_calc.total_contribute_num[1]})/{kpi_calc.total_expected_num[1]}={kpi_calc.dps_1:.3}"
+            # f"({kpi_calc.total_history_num[2]}+{kpi_calc.total_contribute_num[2]})/{kpi_calc.total_expected_num[2]}={kpi_calc.dps_2:.3}"
+            # f"{round(availability, DECIMAL):10}\t"
+            # f"{round(utilization, DECIMAL):10}\t"
+            # f"{round(speedup, DECIMAL):10}\t"
+            # f"{round(availability * utilization * speedup, DECIMAL)}\t"
+            # f"{sum(kpi_calc.model_abbr.values())}\n"
+            # f"{kpi_calc.model_abbr}\n"
+            # f"{sum(kpi_calc.rule_count.values())}\n"
+            # f"{kpi_calc.rule_count}\n"
+        )
